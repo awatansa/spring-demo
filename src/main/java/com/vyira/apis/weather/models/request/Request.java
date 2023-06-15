@@ -17,4 +17,7 @@ public class Request {
 
     @JsonProperty("value")
     private String value;
+
+    @JsonProperty("name")
+    private String name;
 }
