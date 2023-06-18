@@ -1,13 +1,15 @@
 package com.vyira.apis.weather.utilities;
 
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vyira.apis.weather.exceptions.ConversionException;
-import lombok.NonNull;
-import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
-import java.util.List;
+import lombok.NonNull;
 
 /**
  * Json Utility class for serialization and deserialization of objects
