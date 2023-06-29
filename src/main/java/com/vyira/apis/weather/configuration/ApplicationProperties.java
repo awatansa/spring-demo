@@ -12,4 +12,5 @@ public class ApplicationProperties {
     private String user;
     private String password;
     private String url;
+    private String databaseName;
 }

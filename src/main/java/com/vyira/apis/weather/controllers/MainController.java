@@ -1,13 +1,11 @@
 package com.vyira.apis.weather.controllers;
 
+import com.vyira.apis.weather.services.business.MainBusinessLogicService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.vyira.apis.weather.services.business.MainBusinessLogicService;
-
-import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Flux;
 
 @Slf4j
@@ -24,6 +22,6 @@ public class MainController {
     @GetMapping("test")
     public Flux<Object> handleGetRequest(@RequestParam String value) {
         log.info("API CALLED={}", value);
-        return Flux.just(service.handleRequest(value));
+        return Flux.from(service.handleRequest(value));
     }
 }
